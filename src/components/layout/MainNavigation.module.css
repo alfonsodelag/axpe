@@ -6,6 +6,16 @@
   justify-content: space-between;
   background-color: #77002e;
   padding: 0 10%;
+  transition: opacity 1.5s ease-in-out; /* Adjusted duration for a smoother fade-out */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.headerhidden {
+  opacity: 0; /* Fade out the header */
 }
 
 .logo {

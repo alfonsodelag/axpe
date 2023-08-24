@@ -28,7 +28,6 @@ function App() {
   }
 
   function addNewMeetup(meetup) {
-    console.log("meetup", meetup);
     setMeetups((prevMeetups) => [meetup, ...prevMeetups]);
   }
 

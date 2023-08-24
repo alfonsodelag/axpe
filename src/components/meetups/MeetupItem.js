@@ -1,7 +1,15 @@
+import { useState } from "react";
 import Card from "../ui/Card";
 import classes from "./MeetupItem.module.css";
 
 export default function MeetupItem({ meetup, onAddToFavorites }) {
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleFavoriteClick = () => {
+    onAddToFavorites(meetup);
+    setIsFavorited(true);
+  };
+
   return (
     <li className={classes.item} data-test="meet-up-item">
       <Card>
@@ -17,9 +25,10 @@ export default function MeetupItem({ meetup, onAddToFavorites }) {
           <div className={classes.actions}>
             <button
               data-test="add-to-favorites-button"
-              onClick={() => onAddToFavorites(meetup)}
+              onClick={handleFavoriteClick}
+              className={isFavorited ? classes.favorited : ""}
             >
-              Add to favorites
+              {isFavorited ? "Added to Favorites" : "Add to Favorites"}
             </button>
           </div>
         </div>

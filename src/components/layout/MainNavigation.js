@@ -53,7 +53,7 @@ export default function MainNavigation({ favoritesCount }) {
             <Link to="/add-new-meetup">Add New Meetup</Link>
           </li>
           <li>
-            <Link to="/favorites">
+            <Link to="/favorites" data-test="favorites-link">
               My Favorites
               <span className={classes.badge}>{favoritesCount}</span>
             </Link>

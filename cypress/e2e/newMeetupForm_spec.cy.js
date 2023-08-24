@@ -3,7 +3,6 @@
 
 describe("NewMeetupForm E2E Tests", () => {
   beforeEach(() => {
-    // Assuming the form is accessible at this URL
     cy.visit("http://localhost:3000/add-new-meetup");
   });
 

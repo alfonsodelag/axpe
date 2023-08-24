@@ -10,12 +10,15 @@ export default function MeetupItem({ meetup, onAddToFavorites }) {
             <img src={meetup.image} alt={meetup.title} />
           </div>
           <div className={classes.content}>
-            <h3>{meetup.title}</h3>
+            <h3 data-test="favorited-meetup-title">{meetup.title}</h3>
             <address>{meetup.address}</address>
             <p>{meetup.description}</p>
           </div>
           <div className={classes.actions}>
-            <button onClick={() => onAddToFavorites(meetup)}>
+            <button
+              data-test="add-to-favorites-button"
+              onClick={() => onAddToFavorites(meetup)}
+            >
               Add to favorites
             </button>
           </div>
